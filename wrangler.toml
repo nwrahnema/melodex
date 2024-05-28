@@ -1,0 +1,11 @@
+name = "melodex"
+main = "server.tsx"
+compatibility_date = "2023-09-20"
+
+[site]
+bucket = "dist"
+
+[build]
+command = "npm run build"
+cwd = "dist"
+watch_dir = "src"
