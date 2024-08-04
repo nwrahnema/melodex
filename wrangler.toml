@@ -7,5 +7,4 @@ bucket = "dist"
 
 [build]
 command = "npm run build"
-cwd = "dist"
 watch_dir = "src"
