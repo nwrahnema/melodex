@@ -1,7 +1,6 @@
+import { AppType } from '@/server';
 import { useQuery } from '@tanstack/react-query';
 import { hc } from 'hono/client';
-
-import { AppType } from '../../server';
 
 export function usePosts() {
   const client = hc<AppType>('/');

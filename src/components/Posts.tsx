@@ -1,4 +1,4 @@
-import { usePosts } from '../hooks/usePosts';
+import { usePosts } from '@app/hooks/usePosts';
 
 export default function Posts() {
   const { data, isSuccess } = usePosts();
