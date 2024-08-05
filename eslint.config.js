@@ -3,7 +3,20 @@ import perfectionist from 'eslint-plugin-perfectionist';
 import tseslint from 'typescript-eslint';
 
 export default [
-  perfectionist.configs['recommended-natural'],
+  {
+    ...perfectionist.configs['recommended-natural'],
+    rules: {
+      ...perfectionist.configs['recommended-natural'].rules,
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          type: 'natural',
+          ignoreCase: false,
+          internalPattern: ['@/**', '@app/**', '@hooks/**', '@components/**'],
+        },
+      ],
+    },
+  },
   ...tseslint.config(
     eslint.configs.recommended,
     ...tseslint.configs.strictTypeChecked,

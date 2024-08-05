@@ -1,4 +1,3 @@
-import App from '@app/App';
 import {
   getAssetFromKV,
   MethodNotAllowedError,
@@ -9,6 +8,8 @@ import assetManifest from '__STATIC_CONTENT_MANIFEST';
 import { Hono } from 'hono';
 import { handle } from 'hono/cloudflare-pages';
 import * as ReactDOMServer from 'react-dom/server';
+
+import App from '@app/App';
 
 interface Bindings {
   __STATIC_CONTENT: KVNamespace;

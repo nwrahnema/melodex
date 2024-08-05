@@ -9,8 +9,10 @@
     "types": ["@cloudflare/workers-types", "@types/node"],
     "baseUrl": ".",
     "paths": {
+      "@/*": ["*"],
       "@app/*": ["src/*"],
-      "@/*": ["*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@components/*": ["src/components/*"]
     }
   }
 }
