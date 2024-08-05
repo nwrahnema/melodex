@@ -1,10 +1,10 @@
-import { usePosts } from '../hooks/usePosts'
+import { usePosts } from '../hooks/usePosts';
 
 export default function Posts() {
-  const { data, isSuccess } = usePosts()
+  const { data, isSuccess } = usePosts();
 
   if (!isSuccess) {
-    return <>Fetching...</>
+    return <>Fetching...</>;
   }
 
   return (
@@ -13,5 +13,5 @@ export default function Posts() {
         <li>{item.title}</li>
       ))}
     </ul>
-  )
+  );
 }
